@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   pages: true,
   app: {
     head: {
-      link: [{ rel: "icon", type: "image/x-icon", href: "./assets/img/logo_cercle_escrime.ico" }],
+      link: [{ rel: "icon", type: "image/png", href: "/favicon.ico" }],
     },
   },
 });

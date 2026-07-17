@@ -3,7 +3,7 @@ import logo from "../assets/img/logo_cercle_escrime2.png";
 
 const items = [
   { label: "Accueil", to: "/" },
-  { label: "Test", to: "/test" },
+  // { label: "Test", to: "/test" },
   { label: "Contact", to: "/contact" },
   { label: "Info pratiques", to: "/info" },
   { label: "Resultats", to: "/results" },
@@ -19,12 +19,12 @@ const items = [
   <UHeader class="bg-background-layout">
     <template #left>
       <img :src="logo" alt="logo" class="w-20 h-20" loading="lazy" />
-      <h1 class="text-2xl font-bold">Cercle d'escrime de Laxou</h1>
+      <h1 class="text-2xl ml-2 font-bold">Cercle d'escrime de Laxou</h1>
     </template>
     <template #right>
       <UNavigationMenu :items="items" color="neutral">
         <template #item="{ item }">
-          <span class="text-lg whitespace-nowrap">{{ item.label }}</span>
+          <span class="text-md whitespace-nowrap">{{ item.label }}</span>
         </template>
       </UNavigationMenu>
     </template>
