@@ -1,12 +1,12 @@
-
 <template>
-  <NuxtLayout />
-  <!-- <UNavigationMenu :items="items" class="fixed top-0 left-0 z-50" /> -->
-  <div class="w-full px-5 py-5">
-    <NuxtPage />
-  </div>
+  <UApp class="bg-background-layout text-text-layout">
+    <NuxtLayout />
+    <UMain
+      class="flex flex-col min-h-screen mx-0 md:mx-20 lg:mx-40 xl:mx-60 2xl:mx-80"
+    >
+      <NuxtPage />
+    </UMain>
+  </UApp>
 </template>
 
-<style lang="css">
-
-</style>
+<style lang="css"></style>

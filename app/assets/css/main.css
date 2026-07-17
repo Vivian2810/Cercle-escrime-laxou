@@ -21,6 +21,7 @@
 :root {
   font-family: "Space Mono", monospace, sans-serif;
   --ui-header-height: 6rem;
+  --ui-header-margin: 0 1rem;
 }
 
 /* * {

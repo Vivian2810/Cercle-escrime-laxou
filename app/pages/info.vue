@@ -14,10 +14,10 @@ const items = [
 
 <template>
     <h1 class="text-lg">Informations</h1>
-    <UNavigationMenu :items="items" class="mr-6 w-1/4 border " color="neutral" orientation="vertical">
+    <UNavigationMenu :items="items" class="mr-6 w-min border-2 px-4 py-2 rounded-2xl " color="neutral" orientation="vertical">
         <template #item="{ item }">
             <span
-                class="custom-underline hover:bg-hover-menu cursor-pointer text-md"
+                class="custom-underline hover:bg-hover-menu rounded-2xl cursor-pointer text-md"
                 >{{ item.label }}</span
             >
         </template>

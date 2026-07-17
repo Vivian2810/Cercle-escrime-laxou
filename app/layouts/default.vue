@@ -5,7 +5,7 @@ const items = [
   { label: "Accueil", to: "/" },
   { label: "Test", to: "/test" },
   { label: "Contact", to: "/contact" },
-  { label: "Info pratiques", to: "/info"},
+  { label: "Info pratiques", to: "/info" },
   { label: "Resultats", to: "/results" },
   {
     label: "Facebook",
@@ -16,24 +16,23 @@ const items = [
 </script>
 
 <template>
-  <div
-    class="w-full bg-background-layout flex justify-between items-center px-9 py-3"
-  >
-    <div class="flex items-center space-x-4 ml-6">
+  <UHeader class="bg-background-layout">
+    <template #left>
       <img :src="logo" alt="logo" class="w-20 h-20" loading="lazy" />
       <h1 class="text-2xl font-bold">Cercle d'escrime de Laxou</h1>
-    </div>
-
-    <UNavigationMenu :items="items" class="mr-6" color="neutral">
-      <template #item="{ item }">
-        <span class="text-lg">{{ item.label }}</span>
-      </template>
-    </UNavigationMenu>
-  </div>
+    </template>
+    <template #right>
+      <UNavigationMenu :items="items" color="neutral">
+        <template #item="{ item }">
+          <span class="text-lg whitespace-nowrap">{{ item.label }}</span>
+        </template>
+      </UNavigationMenu>
+    </template>
+  </UHeader>
 </template>
 
 <style scoped>
-.custom-underline {
+/* .custom-underline {
   position: relative;
   display: inline-block;
 }
@@ -50,5 +49,5 @@ const items = [
   background: url("@/assets/img/fleuret.png") no-repeat;
 
   background-size: contain;
-}
+} */
 </style>
