@@ -12,10 +12,10 @@
 
 @font-face {
   font-family: 'Space Mono';
-  src: url('@/assets/font/SpaceMono-Regular.ttf') format('truetype'),
-    url('@/assets/font/SpaceMono-Bold.ttf') format('truetype'),
-    url('@/assets/font/SpaceMono-Italic.ttf') format('truetype'),
-    url('@/assets/font/SpaceMono-BoldItalic.ttf') format('truetype');
+  src: url('@/assets/font/SpaceMono/SpaceMono-Regular.ttf') format('truetype'),
+    url('@/assets/font/SpaceMono/SpaceMono-Bold.ttf') format('truetype'),
+    url('@/assets/font/SpaceMono/SpaceMono-Italic.ttf') format('truetype'),
+    url('@/assets/font/SpaceMono/SpaceMono-BoldItalic.ttf') format('truetype');
 }
 
 :root {
