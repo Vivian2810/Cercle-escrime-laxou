@@ -12,19 +12,20 @@
 
 @font-face {
   font-family: 'Space Mono';
-  src: url('@/assets/fonts/SpaceMono-Regular.ttf') format('truetype'),
-    url('@/assets/fonts/SpaceMono-Bold.ttf') format('truetype'),
-    url('@/assets/fonts/SpaceMono-Italic.ttf') format('truetype'),
-    url('@/assets/fonts/SpaceMono-BoldItalic.ttf') format('truetype');
+  src: url('@/assets/font/SpaceMono-Regular.ttf') format('truetype'),
+    url('@/assets/font/SpaceMono-Bold.ttf') format('truetype'),
+    url('@/assets/font/SpaceMono-Italic.ttf') format('truetype'),
+    url('@/assets/font/SpaceMono-BoldItalic.ttf') format('truetype');
 }
 
 :root {
   font-family: "Space Mono", monospace, sans-serif;
+  --ui-header-height: 6rem;
 }
 
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 body {
   background-color: #121212;
