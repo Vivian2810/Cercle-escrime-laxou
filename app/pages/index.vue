@@ -32,7 +32,7 @@ const nomSite = "Cercle d'escrime de Laxou";
             target="_blank"
             class="text-primary hover:underline"
           >
-            Liberté, 54520 Laxou 3 Pl. de la
+            Gymnase Pergaud, 3 Pl. de la Liberté, 54520 Laxou
           </a>
         </p>
 
