@@ -1,13 +1,22 @@
 <script setup lang="ts">
+import { useMonitorSize } from "~/composables/monitor-size";
+
+const size = useMonitorSize();
 const nomSite = "Cercle d'escrime de Laxou";
 </script>
 
 <template>
   <div>
-    <UPageHeader class="text-3xl font-bold underline">
+    <UPageHeader
+      class="text-3xl font-bold"
+      :class="{ 'mx-5': size.idSize.value === 3 }"
+    >
       {{ nomSite }}
     </UPageHeader>
-    <div class="flex items-center justify-center gap-4">
+    <div
+      class="flex items-center justify-center gap-4 my-4"
+      :class="{ 'flex-col mx-5 ': size.idSize.value === 3 }"
+    >
       <div>
         <p class="w-full">Bienvenue sur le site de notre club</p>
         <p>Nous vous acceuillons dans notre club à partir de 6 ans</p>
