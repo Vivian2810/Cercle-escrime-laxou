@@ -8,14 +8,12 @@ const nomSite = "Cercle d'escrime de Laxou";
 <template>
   <div>
     <UPageHeader
-      class="text-3xl font-bold"
-      :class="{ 'mx-5': size.idSize.value === 3 }"
+      class="text-3xl font-bold mx-5 md:mx-0"
     >
       {{ nomSite }}
     </UPageHeader>
     <div
-      class="flex items-center justify-center gap-4 my-4"
-      :class="{ 'flex-col mx-5 ': size.idSize.value === 3 }"
+      class="flex items-center justify-center gap-4 my-4 flex-col mx-5 md:flex-row md:mx-0"
     >
       <div>
         <p class="w-full">Bienvenue sur le site de notre club</p>

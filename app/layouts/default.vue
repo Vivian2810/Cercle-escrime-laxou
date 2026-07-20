@@ -20,43 +20,55 @@ const items = [
   },
 ];
 
-const size = useMonitorSize();
+const size = await useMonitorSize();
 </script>
 
 <template>
-  <UHeader class="bg-background-layout" color="neutral">
+  <UHeader
+    :ui="{
+      body: 'bg-background-layout',
+      content: 'bg-background-layout',
+    }"
+    class="bg-background-layout"
+    color="neutral"
+  >
     <template #left>
       <img :src="logo" alt="logo" class="w-20 h-20" loading="lazy" />
       <h1 class="text-2xl ml-2 font-bold">Cercle d'escrime de Laxou</h1>
     </template>
-    <template #right v-if="size.idSize.value === 1">
-      <UNavigationMenu :items="items" color="neutral">
-        <template #item="{ item }">
-          <UIcon
-            v-if="item.icon"
-            :name="item.icon"
-            class="size-4 text-primary"
-          />
-          <span class="text-md whitespace-nowrap">{{ item.label }}</span>
-        </template>
-      </UNavigationMenu>
+    <template #right>
+      <div class="hidden lg:flex">
+        <UNavigationMenu :items="items" color="neutral">
+          <template #item="{ item }">
+            <UIcon
+              v-if="item.icon"
+              :name="item.icon"
+              class="size-4 text-primary"
+            />
+            <span class="text-md whitespace-nowrap">{{ item.label }}</span>
+          </template>
+        </UNavigationMenu>
+      </div>
     </template>
 
-    <template #body v-else>
-      <UNavigationMenu
-        :items="items"
-        color="neutral"
-        :orientation="size.idSize.value === 3 ? 'vertical' : 'horizontal'"
-      >
-        <template #item="{ item }">
-          <UIcon
-            v-if="item.icon"
-            :name="item.icon"
-            class="size-4 text-primary"
-          />
-          <span class="text-md whitespace-nowrap">{{ item.label }}</span>
-        </template>
-      </UNavigationMenu>
+    <template #body>
+      <div class="flex lg:hidden">
+        <UNavigationMenu
+          :items="items"
+          color="neutral"
+          class="max-md:flex-col"
+          :orientation="size.idSize.value === 3 ? 'vertical' : 'horizontal'"
+        >
+          <template #item="{ item }">
+            <UIcon
+              v-if="item.icon"
+              :name="item.icon"
+              class="size-4 text-primary"
+            />
+            <span class="text-md whitespace-nowrap">{{ item.label }}</span>
+          </template>
+        </UNavigationMenu>
+      </div>
     </template>
   </UHeader>
 </template>
