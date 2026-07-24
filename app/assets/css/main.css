@@ -9,20 +9,47 @@
   --color-hover-menu: #2c2c2c;
   --color-background-layout: #1a1a1a;
   --color-primary: #fbea00;
+  --font-heading: 'Nunito', sans-serif;
 }
 
 @font-face {
-  font-family: 'Space Mono';
-  src: url('../font/Space_Mono/SpaceMono-Regular.ttf') format('truetype'),
-    url('../font/Space_Mono/SpaceMono-Bold.ttf') format('truetype'),
-    url('../font/Space_Mono/SpaceMono-Italic.ttf') format('truetype'),
-    url('../font/Space_Mono/SpaceMono-BoldItalic.ttf') format('truetype');
+  font-family: 'Baloo 2';
+  src: url('../font/Baloo_2/static/Baloo2-Regular.ttf') format('truetype'),
+    url('../font/Baloo_2/static/Baloo2-Bold.ttf') format('truetype'),
+    url('../font/Baloo_2/static/Baloo2-ExtraBold.ttf') format('truetype'),
+    url('../font/Baloo_2/static/Baloo2-Medium.ttf') format('truetype'),
+    url('../font/Baloo_2/static/Baloo2-SemiBold.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('../font/Nunito/static/Nunito-Black.ttf') format('truetype'),
+    url('../font/Nunito/static/Nunito-BoldItalic.ttf') format('truetype'),
+    url('../font/Nunito/static/Nunito-ExtraBold.ttf') format('truetype'),
+    url('../font/Nunito/static/Nunito-ExtraBoldItalic.ttf') format('truetype'),
+    url('../font/Nunito/static/Nunito-ExtraLight.ttf') format('truetype'),
+    url('../font/Nunito/static/Nunito-ExtraLightItalic.ttf') format('truetype'),
+    url('../font/Nunito/static/Nunito-Light.ttf') format('truetype'),
+    url('../font/Nunito/static/Nunito-LightItalic.ttf') format('truetype'),
+    url('../font/Nunito/static/Nunito-Medium.ttf') format('truetype'),
+    url('../font/Nunito/static/Nunito-MediumItalic.ttf') format('truetype'),
+    url('../font/Nunito/static/Nunito-Regular.ttf') format('truetype'),
+    url('../font/Nunito/static/Nunito-SemiBold.ttf') format('truetype'),
+    url('../font/Nunito/static/Nunito-SemiBoldItalic.ttf') format('truetype');
 }
 
 :root {
-  font-family: "Space Mono", monospace, sans-serif;
+  font-family: "Baloo 2", monospace, sans-serif;
+  /* font-family: "Nunito", monospace, sans-serif; */
   --ui-header-height: 6rem;
   --ui-header-margin: 0 1rem;
+}
+
+h1,
+h2,
+h3,
+.text {
+  font-family: 'Nunito', sans-serif;
 }
 
 /* * {

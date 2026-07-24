@@ -1,6 +1,5 @@
-<script lang="ts" setup>
-</script>
+<script lang="ts" setup></script>
 
 <template>
-    <h1>Resultats</h1>
-</template> 
+  <UPageHeader class="mb-4" title="Resultats" />
+</template>

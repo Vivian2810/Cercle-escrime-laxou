@@ -2,6 +2,7 @@
 <script setup lang="ts">
 import { z } from "zod";
 import type { FormSubmitEvent } from "@nuxt/ui";
+import { error } from "node:console";
 
 const schema = z.object({
   name: z.string().min(2, "2 caractères minimum"),
@@ -44,7 +45,13 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 <template>
   <UForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
     <UFormField label="Nom" name="name" required>
-      <UInput v-model="state.name" placeholder="Votre nom" class="w-full" />
+      <UInput
+        v-model="state.name"
+        placeholder="Votre nom"
+        class="w-full"
+        size="xl"
+        variant="soft"
+      />
     </UFormField>
 
     <UFormField label="Email" name="email" required>
@@ -53,6 +60,9 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         type="email"
         placeholder="vous@exemple.com"
         class="w-full"
+        size="xl"
+        trailing-icon="i-lucide-at-sign"
+        variant="soft"
       />
     </UFormField>
 
@@ -62,6 +72,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         :rows="5"
         placeholder="Votre message..."
         class="w-full"
+        variant="soft"
       />
     </UFormField>
 
@@ -72,18 +83,20 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       label="Envoyer"
       block
     />
-
-    <UAlert
-      v-if="status === 'success'"
-      color="success"
-      title="Message envoyé !"
-      description="Nous vous répondrons rapidement."
-    />
-    <UAlert
-      v-if="status === 'error'"
-      color="error"
-      title="Une erreur est survenue"
-      description="Merci de réessayer plus tard."
-    />
   </UForm>
+
+  <Alerte
+    title="Message envoyé !"
+    description="Nous vous repondrons rapidement."
+    color="success"
+    :open="status === 'success'"
+    @close="status = 'idle'"
+  />
+  <Alerte
+    title="Une erreur est survenue"
+    description="Merci de réessayer plus tard."
+    color="error"
+    :open="status === 'error'"
+    @close="status = 'idle'"
+  />
 </template>

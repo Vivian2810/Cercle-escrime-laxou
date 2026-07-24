@@ -20,9 +20,7 @@ console.log("Selected item:", selectedItem.value);
 </script>
 
 <template>
-  <UPageHeader class="text-3xl font-bold mb-4">
-    Informations pratiques
-  </UPageHeader>
+  <UPageHeader class="text-3xl font-bold mb-4" title="Informations pratiques"/>
   <div class="flex">
     <UNavigationMenu
       :model-value="selectedItem"

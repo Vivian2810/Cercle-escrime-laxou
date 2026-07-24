@@ -20,7 +20,7 @@ const items = [
   },
 ];
 
-const size = await useMonitorSize();
+const size = useMonitorSize();
 </script>
 
 <template>
@@ -29,17 +29,19 @@ const size = await useMonitorSize();
       body: 'bg-background-layout',
       content: 'bg-background-layout',
     }"
-    class="bg-background-layout"
+    class="bg-background-layout lg:mx-0"
     color="neutral"
   >
-    <template #left>
-      <img :src="logo" alt="logo" class="w-20 h-20" loading="lazy" />
-      <h1 class="text-2xl ml-2 font-bold">Cercle d'escrime de Laxou</h1>
+    <template #left >
+      <div @click="$router.push('/')" class="flex items-center cursor-pointer">
+        <img :src="logo" alt="logo" class="w-20 h-20" loading="lazy" />
+        <h1 class="text-2xl ml-2 font-bold">Cercle d'escrime de Laxou</h1>
+      </div>
     </template>
     <template #right>
       <div class="hidden lg:flex">
         <UNavigationMenu :items="items" color="neutral">
-          <template #item="{ item }">
+          <template #item="{ item }" >
             <UIcon
               v-if="item.icon"
               :name="item.icon"
