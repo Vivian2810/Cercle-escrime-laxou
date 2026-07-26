@@ -7,12 +7,12 @@ const nomSite = "Cercle d'escrime de Laxou";
 
 <template>
   <div>
-    <UPageHeader class=" md:mx-0" :title="nomSite"/>
+    <UPageHeader class="md:mx-0" :title="nomSite" />
     <div
-      class="flex items-center justify-center gap-4 my-4 flex-col md:flex-row md:mx-0"
+      class="flex items-center justify-center gap-4 my-4 flex-col md:flex-row md:mr-4"
     >
-      <div>
-        <p class="w-full">Bienvenue sur le site de notre club</p>
+      <div class="md:w-1/2 mx-auto w-full text-center lg:w-3/4 py-3 text-lg">
+        <h3 class="w-full">Bienvenue sur le site de notre club</h3>
         <p>Nous vous accueillons dans notre club à partir de 6 ans.</p>
         <p>
           Nous y pratiquons l'escrime dans une ambiance conviviale et familiale,
@@ -49,19 +49,21 @@ const nomSite = "Cercle d'escrime de Laxou";
         actualités et les modalités d'inscription. Au plaisir de vous accueillir
         prochainement sur les pistes ! -->
       </div>
-      <ClientOnly class="w-2/5">
+      <ClientOnly class="lg:w-1/2">
         <!-- 48.68598888971369, 6.142893896318755 -->
         <AddressMap
           :lat="48.68598888971369"
           :lng="6.142893896318755"
           label="Gymnase Pergaud, 3 Pl. de la Liberté, 54520 Laxou"
         />
-        <template #fallback
-          ><div
-            class="h-[400px] w-full rounded-lg bg-elevated relative overflow-hidden flex items-center justify-center"
+        <template #fallback>
+          <div
+            class="h-[450px] w-1/2 rounded-lg bg-elevated relative overflow-hidden flex items-center justify-center"
           >
             <!-- spinner + texte -->
-            <div class="relative flex flex-col items-center gap-3 text-muted">
+            <div
+              class="relative lg:w-1/2 flex flex-col items-center gap-3 text-muted"
+            >
               <UIcon name="i-lucide-map-pin" class="size-8 animate-bounce" />
               <p class="text-sm">Chargement de la carte...</p>
             </div>

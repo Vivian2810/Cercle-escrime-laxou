@@ -2,7 +2,7 @@
   <UApp class="bg-background-layout text-text-layout">
     <NuxtLayout />
     <UMain
-      class="flex flex-col min-h-screen mx-4 md:mx-20 lg:mx-20 "
+      class="flex flex-col min-h-screen mx-4 md:mx-20 lg:mx-20 xl:mx-40"
     >
       <NuxtPage />
     </UMain>
@@ -19,7 +19,7 @@
           variant="ghost"
           target="_blank"
           href="https://github.com/Vivian2810"
-          
+
         ></UButton>
       </div>
     </UFooter>

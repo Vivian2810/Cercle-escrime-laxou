@@ -43,6 +43,13 @@
   /* font-family: "Nunito", monospace, sans-serif; */
   --ui-header-height: 6rem;
   --ui-header-margin: 0 1rem;
+  font-size: large;
+}
+
+@media (min-width: 768px) {
+  :root {
+    font-size: mdeium;
+  }
 }
 
 h1,
