@@ -5,18 +5,30 @@ import { useMonitorSize } from "@/composables/monitor-size";
 const items = [
   { label: "Accueil", to: "/", icon: "i-lucide-home" },
   // { label: "Test", to: "/test" },
-  { label: "Contact", to: "/contact", icon: "i-lucide-phone" },
   { label: "Info pratiques", to: "/info", icon: "i-lucide-info" },
   {
     label: "Resultats",
     to: "/results",
     icon: "i-lucide-trophy",
   },
+  { label: "Contact", to: "/contact", icon: "i-lucide-phone" },
   {
-    label: "Facebook",
-    href: "https://www.facebook.com/CercledEscrimeLaxou",
-    target: "_blank",
-    icon: "i-logos:facebook",
+    label: "Reseaux",
+    icon: "i-lucide-users",
+    children: [
+      {
+        label: "Instagram",
+        href: "https://www.instagram.com/cercleescrimelaxou/",
+        target: "_blank",
+        icon: "skill-icons:instagram",
+      },
+      {
+        label: "Facebook",
+        href: "https://www.facebook.com/CercledEscrimeLaxou",
+        target: "_blank",
+        icon: "i-logos:facebook",
+      },
+    ],
   },
 ];
 
@@ -32,7 +44,7 @@ const size = useMonitorSize();
     class="bg-background-layout lg:mx-0"
     color="neutral"
   >
-    <template #left >
+    <template #left>
       <div @click="$router.push('/')" class="flex items-center cursor-pointer">
         <img :src="logo" alt="logo" class="w-20 h-20" loading="lazy" />
         <h1 class="text-2xl ml-2 font-bold">Cercle d'escrime de Laxou</h1>
@@ -40,58 +52,30 @@ const size = useMonitorSize();
     </template>
     <template #right>
       <div class="hidden lg:flex">
-        <UNavigationMenu :items="items" color="neutral">
-          <template #item="{ item }" >
-            <UIcon
-              v-if="item.icon"
-              :name="item.icon"
-              class="size-4 text-primary"
-            />
-            <span class="text-md whitespace-nowrap">{{ item.label }}</span>
-          </template>
-        </UNavigationMenu>
+        <UNavigationMenu
+          :items="items"
+          color="neutral"
+          :ui="{
+            viewport: 'bg-background-layout',
+            linkLeadingIcon: 'text-primary',
+          }"
+        />
       </div>
     </template>
 
     <template #body>
-      <div class="flex lg:hidden">
+      <div class="flex lg:hidden w-full">
         <UNavigationMenu
           :items="items"
           color="neutral"
           class="max-md:flex-col"
-          :orientation="size.idSize.value === 3 ? 'vertical' : 'horizontal'"
-        >
-          <template #item="{ item }">
-            <UIcon
-              v-if="item.icon"
-              :name="item.icon"
-              class="size-4 text-primary"
-            />
-            <span class="text-md whitespace-nowrap">{{ item.label }}</span>
-          </template>
-        </UNavigationMenu>
+          orientation="vertical"
+          :ui="{
+            linkLeadingIcon: 'text-primary',
+            root: 'w-full',
+          }"
+        />
       </div>
     </template>
   </UHeader>
 </template>
-
-<style scoped>
-/* .custom-underline {
-  position: relative;
-  display: inline-block;
-}
-
-.custom-underline:hover::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -1rem;
-
-  width: 100%;
-  height: 1rem;
-
-  background: url("@/assets/img/fleuret.png") no-repeat;
-
-  background-size: contain;
-} */
-</style>
