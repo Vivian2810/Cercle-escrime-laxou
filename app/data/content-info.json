@@ -1,0 +1,64 @@
+{
+  "horraire": {
+    "title": "Horaires d'entrainement",
+    "content": "La séance se compose d'un échauffement, d'une leçon collective à thème ou de leçons individuelles et d'assauts d'application.",
+    "subcontent": "Scéance réparie par age (les mise en tenue ce font 15 min avant le début de la séance) :",
+    "subtitle": "* Réservé aux compétiteurs sur selections du maitre d'armes",
+    "cours": [
+      {
+        "title": "Lundi",
+        "timeList": {
+          "1": {
+            "time": "17h15-18h30",
+            "level": "jeunes débutants",
+            "weapon": "Fleuret - Epee"
+          },
+          "2": {
+            "time": "18h15-19h30",
+            "level": "Confirmés & compétiteurs enfants",
+            "weapon": "Fleuret - Epee"
+          },
+          "3": {
+            "time": "19h30-21h00",
+            "level": "Adultes",
+            "weapon": "Fleuret - Epee"
+          }
+        }
+      },
+      {
+        "title": "Mercredi",
+        "timeList": {
+          "1": {
+            "time": "18h15-19h30",
+            "level": "Compétiteurs *",
+            "weapon": "Fleuret - Epee"
+          },
+          "2": {
+            "time": "19h00-21h00",
+            "level": "Escrimes Artistiques"
+          }
+        }
+      },
+      {
+        "title": "Jeudi",
+        "timeList": {
+          "1": {
+            "time": "17h15-18h30",
+            "level": "Motricité & coordination",
+            "weapon": "Enfants"
+          },
+          "2": {
+            "time": "18h15-19h30",
+            "level": "Confirmés & compétiteurs enfants",
+            "weapon": "Fleuret - Epee"
+          },
+          "3": {
+            "time": "19h30-21h00",
+            "level": "Assauts libres ados & adultes",
+            "weapon": "Fleuret - Epee"
+          }
+        }
+      }
+    ]
+  }
+}

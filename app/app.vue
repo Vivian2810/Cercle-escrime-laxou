@@ -1,3 +1,5 @@
+
+
 <template>
   <UApp class="bg-background-layout text-text-layout">
     <NuxtLayout />
